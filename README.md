@@ -1,3 +1,23 @@
+1 · My early read — what TAP is today
+
+TAP is changing how our metrics look, not how they're made. We're booking surface wins as if they were structural ones — polished interfaces standing in for verified processes. From the outside, we can't see the difference, which is exactly why it's gone unchallenged.
+
+2 · What's real, and what's missing beneath it
+
+The wins are real — automating manual domain work saves time and pulls scattered processes into one place. But that's the trap: they look like structural progress when we can't yet prove they're more than surface-deep. We're moving fast with no shared view of how the numbers are actually made — no lineage, no consistency checks, no quality controls.
+
+3 · Why that should worry us
+
+We have seen exactly where this leads. A view with no governed foundation isn't a dramatic failure on day one — it's just numbers nobody can vouch for, until something breaks and traces straight back to data quality and lineage. That's the road that became remediation last time. And the cost cuts both ways: we can't show what's genuinely working, and we can't catch what's quietly accumulating.
+
+4 · What we do first
+
+Before we build anything else, we need a single governed view of how the numbers are actually produced — the lineage, the inputs, the controls. That's the foundation the roadmap, the priorities, and every "are we being strategic" question has to sit on.
+
+
+
+
+
 Subject: Treasury Landscape — Data Lineage & Migration Heatmap: your review needed
 What it is
 
