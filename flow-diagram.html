@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flow diagram — Systems / Dataset</title>
+<style>
+  :root {
+    --ink:#0f2238; --muted:#5b6675; --chip:#d8dde4;
+    --hi:#d9a93a; --page:#eef1f6; --border:#e2e6ee;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--page); padding:26px 16px 60px;
+    font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1080px; margin:0 auto; }
+  h1 { font-size:19px; color:#16213b; margin:0 0 4px; letter-spacing:-.01em; }
+  .sub { font-size:12px; color:#6a7688; margin:0 0 18px; }
+  .panel {
+    background:#fff; border:1px solid var(--border); border-radius:12px;
+    padding:14px; box-shadow:0 1px 3px rgba(22,33,59,.06); overflow-x:auto;
+  }
+  .node { cursor:pointer; }
+  .node.on .card { stroke:var(--hi); stroke-width:2; }
+  .edge.on { stroke:var(--hi); stroke-width:2; marker-end:url(#arrow-hi); }
+  .foot {
+    margin-top:14px; background:#fafbfc; border:1px solid #8b95a1;
+    border-radius:8px; padding:10px 12px 12px;
+  }
+  .foot h2 {
+    font-size:9.5px; font-weight:800; color:#8b95a1;
+    letter-spacing:.04em; margin:0 0 8px;
+  }
+  table { width:100%; border-collapse:collapse; font-size:10px; }
+  th {
+    text-align:left; font-size:7.5px; font-weight:700; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--muted); padding:0 8px 5px 0;
+    border-bottom:1px solid var(--chip);
+  }
+  th:first-child { width:24px; }
+  td {
+    padding:4px 8px 4px 0; border-bottom:1px solid var(--page);
+    color:var(--ink); white-space:nowrap;
+  }
+  td:nth-child(2) { font-weight:600; }
+  td.idx { font-family:ui-monospace,Menlo,Consolas,monospace; font-size:8px; color:#5b6c8f; }
+  @media print {
+    body { background:#fff; padding:0; }
+    .panel { box-shadow:none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Flow diagram</h1>
+  <p class="sub">Systems &rarr; Dataset. Static export &middot; hover a box to trace its feeds.</p>
+  <div class="panel"><svg viewBox="0 0 480.0 583.4" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block"><defs><marker id="arrow" markerWidth="4.5" markerHeight="4.5" refX="3.5" refY="1.5" orient="auto"><path d="M0,0 L3.5,1.5 L0,3 Z" fill="#5b6675"/></marker><marker id="arrow-hi" markerWidth="4.5" markerHeight="4.5" refX="3.5" refY="1.5" orient="auto"><path d="M0,0 L3.5,1.5 L0,3 Z" fill="#d9a93a"/></marker></defs><text x="68" y="14" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="700" fill="#5b6675" letter-spacing=".06em">SYSTEMS</text><text x="274" y="14" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="9" font-weight="700" fill="#5b6675" letter-spacing=".06em">DATASET</text><path class="edge" data-from="M" data-to="bs-stack" d="M122,225.0 L161.0,225.0 L161.0,225.0 L200,225.0" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="A" data-to="collateral" d="M122,117.0 L161.0,117.0 L161.0,117.0 L200,117.0" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="A" data-to="daily-spot" d="M122,117.0 L161,117.0 L161,63.0 L200,63.0" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="A" data-to="6g" d="M122,117.0 L161,117.0 L161,171.0 L200,171.0" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="Q" data-to="l-bau" d="M122,298.8 L161.0,298.8 L161.0,298.8 L200,298.8" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="Q" data-to="bs-forecast" d="M122,298.8 L161,298.8 L161,360.0 L200,360.0" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="T" data-to="l-forecast" d="M122,414.0 L161.0,414.0 L161.0,414.0 L200,414.0" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="P" data-to="ewi-limits" d="M122,475.2 L161.0,475.2 L161.0,475.2 L200,475.2" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><path class="edge" data-from="AX" data-to="lc-ns" d="M122,536.4 L161.0,536.4 L161.0,536.4 L200,536.4" fill="none" stroke="#5b6675" stroke-width="1.5" marker-end="url(#arrow)"/><g class="node" data-id="A"><rect class="card" x="14" y="94.0" width="108" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="24" y="120.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">A</text></g><g class="node" data-id="M"><rect class="card" x="14" y="202.0" width="108" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="24" y="228.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">M</text></g><g class="node" data-id="Q"><rect class="card" x="14" y="275.8" width="108" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="24" y="301.8" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">Q</text></g><g class="node" data-id="T"><rect class="card" x="14" y="391.0" width="108" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="24" y="417.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">T</text></g><g class="node" data-id="P"><rect class="card" x="14" y="452.2" width="108" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="24" y="478.2" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">P</text></g><g class="node" data-id="AX"><rect class="card" x="14" y="513.4" width="108" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="24" y="539.4" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">AX</text></g><g class="node" data-id="daily-spot"><rect class="card" x="200" y="40.0" width="148" height="46" rx="6" fill="#eef3f9" stroke="#8b95a1" stroke-width="1"/><text x="210" y="66.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">B/S (Actual)</text></g><g class="node" data-id="collateral"><rect class="card" x="200" y="94.0" width="148" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="210" y="120.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">Collateral</text></g><g class="node" data-id="6g"><rect class="card" x="200" y="148.0" width="148" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="210" y="174.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">6G</text></g><g class="node" data-id="bs-stack"><rect x="219.8" y="221.8" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="218.0" y="220.0" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="216.2" y="218.2" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="214.4" y="216.4" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="212.6" y="214.6" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="210.8" y="212.8" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="209.0" y="211.0" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="207.2" y="209.2" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="205.4" y="207.4" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="203.6" y="205.6" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect x="201.8" y="203.8" width="148" height="46" rx="6" fill="#eef3f9" stroke="#d8dde4" stroke-width="1"/><rect class="card" x="200" y="202.0" width="148" height="46" rx="6" fill="#eef3f9" stroke="#8b95a1" stroke-width="1"/><text x="338" y="215.0" text-anchor="end" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="7" font-weight="600" fill="#5b6675">×~12</text><text x="210" y="229.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">B/S (Plan)</text></g><g class="node" data-id="l-bau"><rect x="207.2" y="283.0" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect x="205.4" y="281.2" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect x="203.6" y="279.4" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect x="201.8" y="277.6" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect class="card" x="200" y="275.8" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#8b95a1" stroke-width="1"/><text x="338" y="288.8" text-anchor="end" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="7" font-weight="600" fill="#5b6675">×5</text><text x="210" y="302.8" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">Metric: L BAU</text></g><g class="node" data-id="bs-forecast"><rect class="card" x="200" y="337.0" width="148" height="46" rx="6" fill="#eef3f9" stroke="#8b95a1" stroke-width="1"/><text x="210" y="363.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">B/S (Forecast/Stressed)</text></g><g class="node" data-id="l-forecast"><rect x="207.2" y="398.2" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect x="205.4" y="396.4" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect x="203.6" y="394.6" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect x="201.8" y="392.8" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#d8dde4" stroke-width="1"/><rect class="card" x="200" y="391.0" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#8b95a1" stroke-width="1"/><text x="338" y="404.0" text-anchor="end" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="7" font-weight="600" fill="#5b6675">×5</text><text x="210" y="418.0" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">Metric: L Forecast</text></g><g class="node" data-id="ewi-limits"><rect x="207.2" y="459.4" width="148" height="46" rx="6" fill="#fff" stroke="#d8dde4" stroke-width="1"/><rect x="205.4" y="457.6" width="148" height="46" rx="6" fill="#fff" stroke="#d8dde4" stroke-width="1"/><rect x="203.6" y="455.8" width="148" height="46" rx="6" fill="#fff" stroke="#d8dde4" stroke-width="1"/><rect x="201.8" y="454.0" width="148" height="46" rx="6" fill="#fff" stroke="#d8dde4" stroke-width="1"/><rect class="card" x="200" y="452.2" width="148" height="46" rx="6" fill="#fff" stroke="#8b95a1" stroke-width="1"/><text x="210" y="478.2" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">EWI / Limits</text></g><g class="node" data-id="lc-ns"><rect class="card" x="200" y="513.4" width="148" height="46" rx="6" fill="#e9f5ef" stroke="#8b95a1" stroke-width="1"/><text x="210" y="539.4" font-family="ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0f2238">Metric: LC/NS</text></g></svg></div>
+  <div class="foot">
+    <h2>STATEMENT / VINTAGE / AGGREGATION COMBINATIONS</h2>
+    <table>
+      <thead><tr><th>#</th><th>Statement</th><th>Vintage</th><th>Aggregation</th></tr></thead>
+      <tbody><tr><td class="idx">1</td><td class="">Position</td><td class="">Actual</td><td class="">Point</td></tr><tr><td class="idx">2</td><td class="">Position</td><td class="">Actual</td><td class="">Mean</td></tr><tr><td class="idx">3</td><td class="">Position</td><td class="">Plan</td><td class="">Point</td></tr><tr><td class="idx">4</td><td class="">Position</td><td class="">Plan</td><td class="">Mean</td></tr><tr><td class="idx">5</td><td class="">Position</td><td class="">Forecast</td><td class="">Point</td></tr><tr><td class="idx">6</td><td class="">Position</td><td class="">Forecast</td><td class="">Mean</td></tr><tr><td class="idx">7</td><td class="">Position</td><td class="">Stressed</td><td class="">Point</td></tr><tr><td class="idx">8</td><td class="">Earnings</td><td class="">Actual</td><td class="">Sum</td></tr><tr><td class="idx">9</td><td class="">Earnings</td><td class="">Plan / Forecast</td><td class="">Sum</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<script>
+(function () {
+  var nodes = document.querySelectorAll('.node');
+  var edges = document.querySelectorAll('.edge');
+  function set(id, on) {
+    var linked = {};
+    edges.forEach(function (e) {
+      var f = e.dataset.from, t = e.dataset.to;
+      if (f === id || t === id) {
+        e.classList.toggle('on', on);
+        linked[f] = linked[t] = true;
+      }
+    });
+    nodes.forEach(function (n) {
+      n.classList.toggle('on', on && (n.dataset.id === id || linked[n.dataset.id]));
+    });
+  }
+  nodes.forEach(function (n) {
+    n.addEventListener('mouseenter', function () { set(n.dataset.id, true); });
+    n.addEventListener('mouseleave', function () { set(n.dataset.id, false); });
+  });
+})();
+</script>
+</body>
+</html>
